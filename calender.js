@@ -52,7 +52,7 @@ console.log("Organizer for Worshop:", eventOrganizers.get(events[2]));
 
 // Display event details in table format using destructuring
 console.table(
-  events.map(({ title, date, location }) => ({ title, date: date.toLocaleDateString(), location }))
+  events.map(({ title, date, location }) => ({ title, date: date.toString(), location }))
 );
 
 function addAttendee(eventTitle, attendeeName) {
@@ -79,7 +79,7 @@ function eventsToJSON() {
       };
     }
     return value;
-  }, 2); // Indentation of 2 spaces for readability
+  }, 2); 
 }
 
 
